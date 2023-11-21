@@ -5,7 +5,7 @@ window.onload = () => {
     let pronoun = ["A", "The"];
     let subject = ["dog", "racoon", "turtle", "bird", "comedian"];
     let action = ["took my", "threw my", "stole my"];
-    let possetion = ["homework", "toe", "car", "show"];
+    let possetion = ["homework", "toe", "car", "shoe"];
     let where = ["on the street", "in my house", "in my driveway"];
 
     let pronounIndex = Math.floor(Math.random() * pronoun.length);
@@ -27,7 +27,6 @@ window.onload = () => {
     );
   };
   document.querySelector("#BTN").addEventListener("click", () => {
-    //Excusa random
     document.querySelector("#the-excuse").innerHTML = generateExcuse();
   });
 };
