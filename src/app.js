@@ -31,24 +31,20 @@ import "./style.css";
 //   });
 // };
 
-const who = ["The dog", "My grandma", "His turtle", "My bird"];
-const action = ["ate", "peed", "crushed", "broke"];
-const what = ["my homework", "the keys", "the car"];
-const when = [
-  "before the class",
-  "right on time",
-  "when I finished",
-  "during my lunch",
-  "while I was praying"
-];
+const pronoun = ["A", "The"];
+const subject = ["dog", "racoon", "turtle", "bird", "comedian"];
+const action = ["took my", "threw my", "stole my"];
+const possetion = ["homework", "toe", "car", "shoe"];
+const where = ["on the street", "in my house", "in my driveway"];
 
 const generateExcuse = () => {
-  const whoIndx = Math.floor(Math.random() * who.length);
+  const pronounIndx = Math.floor(Math.random() * pronoun.length);
+  const subjectIndx = Math.floor(Math.random() * subject.length);
   const actionIndx = Math.floor(Math.random() * action.length);
-  const whatIndx = Math.floor(Math.random() * what.length);
-  const whenIndx = Math.floor(Math.random() * when.length);
+  const possetionIndx = Math.floor(Math.random() * possetion.length);
+  const whereIndx = Math.floor(Math.random() * where.length);
 
-  return `${who[whoIndx]} ${action[actionIndx]} ${what[whatIndx]} ${when[whenIndx]}`;
+  return `${pronoun[pronounIndx]} ${subject[subjectIndx]} ${action[actionIndx]} ${possetion[possetionIndx]} ${where[whereIndx]}`;
 };
 
 document.querySelector("#btn").addEventListener("click", () => {
